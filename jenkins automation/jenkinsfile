@@ -1,8 +1,6 @@
 pipeline {
         stage('Build Image') {
-            agent {
-                docker {
-                }
+            agent any
             steps {
                 sh("rm -fr ./*")
                 git url: 'https://github.com/abhijithvg/jenkins-pipeline-demo'
